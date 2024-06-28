@@ -20,6 +20,7 @@ Blockchain.prototype.createNewBlock = function(nonce, prevBlockHash, hash)//noun
     return newBlock;
 }
 
+
 /* What this above code will do? We create a constructor function named Blockchain having a chain array (all blocks which we create will store
 in this array) and a pendingTransaction array (transactions which are waiting for to be mine will stay in this array).
 Then we create a method named (createNewBlock) with the prototype property (means it will become the part of the above constructor function),
@@ -29,5 +30,24 @@ After a block created, pending transactions are used, that's why we have to empt
 Then add the block to the chain array with the push method.
 Summary: This code will collect all transactions in pending transactions array then create a new block which will go in the chain array and 
 pending transactions will goes empty*/
+
+Blockchain.prototype.getLastBlock = function() //this method will use to get the access to the last mined block from which we need some properties to mine the nest block
+{
+    return this.chain[this.chain.length - 1];  //this line of code take us to the chain array and give us the access to the previous block
+}
+
+Blockchain.prototype.createNewTransaction = function (amount, sender, recepient) /*method to create a new transaction because without any 
+pending transaction, we can't create any block*/
+{
+    const newTransaction = {  
+        amount: amount,
+        sender: sender,
+        recepient: recepient
+    };
+
+    this.pendingTransactions.push(newTransaction); //this will push the new transaction into the pending transaction array
+
+    return this.getLastBlock() ['index'] + 1;
+}
 
 module.exports = Blockchain; //module.exports is function will export the construc func to the test.js file where we will import it
