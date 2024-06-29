@@ -1,9 +1,12 @@
+const sha256 = require ('sha256');
+
+
 function Blockchain (){
     this.chain = [];//this where our blocks or blockchain will store after mining
     this.pendingTransactions = [];//pending transactions 1st store here, then mine and then add to upper chain array       
 }
 
-Blockchain.prototype.createNewBlock = function(nonce, prevBlockHash, hash)//nounce basically a num which you get after proof of work
+Blockchain.prototype.createNewBlock = function(nonce, prevBlockHash, hash)//nonce basically a num which you get after proof of work
 {
     const newBlock = {
         index: this.chain.length+1,
@@ -48,6 +51,21 @@ pending transaction, we can't create any block*/
     this.pendingTransactions.push(newTransaction); //this will push the new transaction into the pending transaction array
 
     return this.getLastBlock() ['index'] + 1;
+}
+
+/*hashBlock method will give us hash by taking the previousBlockHash, currentBlockData (transactions) and nonce, we will add them and put them 
+into the sha256 algorithm which will give the hash*/
+
+Blockchain.prototype.hashBlock = function(prevBlockHash, currentBlockData, nonce) 
+{
+    const dataAsString = prevBlockHash + nonce.toString() + JSON.stringify(currentBlockData);
+    //This line of code will cancatenate all the parameters and save them in a variable "dataAsString" 
+    /*toString() is a built method in js which converts a num into string and JSON.stringify() is also a built js method which converts a 
+    JavaScript value (can be an array or object) to a JavaScript object notation string.*/
+
+    const hash = sha256(dataAsString); //calling the sha256 algorithm putting the values in it and saving it in a variable "hash"
+    
+    return hash;
 }
 
 module.exports = Blockchain; //module.exports is function will export the construc func to the test.js file where we will import it
