@@ -68,4 +68,20 @@ Blockchain.prototype.hashBlock = function(prevBlockHash, currentBlockData, nonce
     return hash;
 }
 
+//This function will do Proof of Work 
+
+Blockchain.prototype.proofOfWork = function(prevBlockHash, currentBlockData)
+{
+    let nonce = 0; 
+    let hash = this.hashBlock(prevBlockHash, currentBlockData, nonce); 
+
+    while (hash.substring(0, 4) !== '0000')
+        {
+            nonce++;
+            hash = this.hashBlock(prevBlockHash, currentBlockData, nonce)
+          //console.log(hash);    <<<write this line if you want to see proof of work running in your terminal  
+        }
+        return nonce;
+} 
+
 module.exports = Blockchain; //module.exports is function will export the construc func to the test.js file where we will import it
