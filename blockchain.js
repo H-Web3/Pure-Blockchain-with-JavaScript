@@ -5,10 +5,10 @@ function Blockchain (){
     this.chain = [];//this where our blocks or blockchain will store after mining
     this.pendingTransactions = [];//pending transactions 1st store here, then mine and then add to upper chain array       
 
-    //Creating Genesis block
+    //Creating Genesis block by giving dummy nonce, pevious block hash and hash
     this.createNewBlock(4549, 'D1FE25AFFF30300C6AC1A8E3CE0C7EF99D298D8AC3ABE347741F13B56BD7D883',
                                  '0000e0e9b7b4cb7acbf3a9da692b0212c2f5ee3bb184e34833cb29919c7663d3');
-                                 
+
 }
 
 Blockchain.prototype.createNewBlock = function(nonce, prevBlockHash, hash)//nonce basically a num which you get after proof of work
