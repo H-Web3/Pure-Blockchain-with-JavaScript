@@ -17,3 +17,8 @@ We implement Proof of Work in this lecture by writing a function named "proofOfW
 <br>
 <br>
 Lecture # 10 Proof of Work & Genesis Block. In this lecture, we create a genesis block by calling the "createNewBlock" methon in the blockchain constructor function giving it the dummy nonce, previous block hash and hash. Then test it which gives the genesis block.
+<br>
+"Lecture # 11 In this session, We will be accessing the blockchain data structure through a local server."
+above is the lecture name in course.
+<br>
+In this lecture, we install express js in VScode to hit end points in browser. Also create a file name "api.js" in which we require express and we will create api's in that file. 
