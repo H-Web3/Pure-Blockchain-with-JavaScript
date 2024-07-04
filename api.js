@@ -1,10 +1,6 @@
 const express = require('express')
 const app = express()
 
-app.get('/blockchainDemo', function (req, res) {
-  res.send('Hello World, coding javascript, see guys!, let start we will go')
-})
-
 app.get('/blockchain', function (req, res) {
   res.send('Here we will show our complete blockchian')
 })
