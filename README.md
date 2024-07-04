@@ -22,3 +22,13 @@ Lecture # 10 Proof of Work & Genesis Block. In this lecture, we create a genesis
 above is the lecture name in course.
 <br>
 In this lecture, we install express js in VScode to hit end points in browser. Also create a file name "api.js" in which we require express and we will create api's in that file. 
+<br>
+Lecture # 12 Accessing the Blockchain through an Api/server.
+<br>
+Main focus is to make our developing environment better.
+<br> 
+In this lecture, we learn the 'get' and 'post' methods. 'get' method takes two parameters, first one we write an 'end point' and in the second one, we write a req,res function, which we also called 'objects'. 'req' will send data from client to server side and 'res' send data from server to client side. 
+<br>
+'get' http method will get data from server side to client side and 'post' http method side will from client side to server side.
+<br>
+install nodemon to refresh the changes automatically   
