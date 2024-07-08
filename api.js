@@ -16,7 +16,10 @@ app.get('/blockchain', function (req, res) {   //make an end point 'blockchain'
 app.post('/transaction', function (req, res) {
   const blockIndex = bitcoin.createNewTransaction(req.body.amount, req.body.sender, req.body.recepient);
   //call the function create new transaction method and parse its parameters
+
+  res.json({note : `This transaction will be added in block ${blockIndex}`});
 })
+//res method will show us note that our transaction will be added in the next block
 
 app.listen(3000, function()
 {
