@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const Blockchain = require('./blockchain'); //require the blockchian.js file
 const bitcoin = new Blockchain(); //make an instance of Blockchain constr func and calling it with 'new' keyword
 
