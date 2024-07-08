@@ -14,7 +14,8 @@ app.get('/blockchain', function (req, res) {   //make an end point 'blockchain'
 });
 
 app.post('/transaction', function (req, res) {
-  res.send('Here we will call our create new transaction method from our blockchain data structure')
+  const blockIndex = bitcoin.createNewTransaction(req.body.amount, req.body.sender, req.body.recepient);
+  //call the function create new transaction method and parse its parameters
 })
 
 app.listen(3000, function()
