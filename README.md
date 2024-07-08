@@ -32,3 +32,9 @@ In this lecture, we learn the 'get' and 'post' methods. 'get' method takes two p
 'get' http method will get data from server side to client side and 'post' http method side will from client side to server side.
 <br>
 install nodemon to refresh the changes automatically   
+<br>
+Lecture # 13 Accessing the blockchain through an API/Server Part three.
+<br>
+In this lecture, first we require the blockchain.js file to the api.js because we want to make an end point which we will access and it will show us all the blocks avalaible in the chain array.
+<br>
+Insatll body-parser which collects our data and take it to the postman. Then require it in the api.js file and also tell the code that the content type is JSON.
