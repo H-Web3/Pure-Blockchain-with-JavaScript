@@ -38,3 +38,7 @@ Lecture # 13 Accessing the blockchain through an API/Server Part three.
 In this lecture, first we require the blockchain.js file to the api.js because we want to make an end point which we will access and it will show us all the blocks avalaible in the chain array.
 <br>
 Insatll body-parser which collects our data and take it to the postman. Then require it in the api.js file and also tell the code that the content type is JSON.
+<br>
+Lecture # 14 Accessing the blockchain through an API/Server Part Four. In this lecture, we write a method to mine a new block which take three parameters nonce, prevBlockHash and hash. We got the previous block hash from calling the getLastBlock method which gives all information of previous block from which we fetch it's hash, acting as prevBlockHash in this block. 
+<br>
+Calling the proofOfWork will give us the nonce, this nonce takes two parameters prevBlockHash(which we can get from the above method) and currentBlockData (pending transactions array).
