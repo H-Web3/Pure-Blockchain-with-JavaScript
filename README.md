@@ -42,3 +42,8 @@ Insatll body-parser which collects our data and take it to the postman. Then req
 Lecture # 14 Accessing the blockchain through an API/Server Part Four. In this lecture, we write a method to mine a new block which take three parameters nonce, prevBlockHash and hash. We got the previous block hash from calling the getLastBlock method which gives all information of previous block from which we fetch it's hash, acting as prevBlockHash in this block. 
 <br>
 Calling the proofOfWork will give us the nonce, this nonce takes two parameters prevBlockHash(which we can get from the above method) and currentBlockData (pending transactions array).
+<br>
+<br>
+Lecture # 15 A Simple wallet for creating new transactions in blockchain datastructure. In this lecture, we create a simple web wallet using HTML having three inout fields amount, sender and recipient.
+<br>
+Then we write two endpoints: get endpoint to send the inex.html file from server to the browser and post endpoint to take the inputs from the browser to the server. 
