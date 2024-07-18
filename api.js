@@ -19,16 +19,6 @@ app.get('/blockchain', function (req, res) {   //make an end point 'blockchain'
   res.send(bitcoin);   
 });
 
-/*---------------------------------------------------------------*/
-//This is for creating New Transaction
-app.post('/transaction', function (req, res) {
-  //call the function create new transaction method and parse its parameters
-  const blockIndex = bitcoin.createNewTransaction(req.body.amount, req.body.sender, req.body.recepient);
-  
-//res method will show us note that our transaction will be added in the next block
-  res.json({note : `This transaction will be added in block ${blockIndex}`});
-})
-
 /*--------------------------------------------------------------*/
 //Mine a new block
 app.get('/mine', function (req, res){
@@ -63,6 +53,21 @@ res.json({
 });
 
 /*----------------------------------------------------------------------*/
+
+// A simple web wallet
+app.get('/wallet', function (req, res) {   
+  res.sendFile(__dirname + "/index.html");   
+});
+
+/*---------------------------------------------------------------------*/
+
+app.post('/wallet', function (req, res) {
+  const blockIndex = bitcoin.createNewTransaction(req.body.amount, req.body.sender, req.body.recipient);
+  res.json({note: `This transaction will be added in block ${blockIndex}`});
+});
+
+/*---------------------------------------------------------------------*/
+
 app.listen(3000, function()
 {
   console.log("Server is running on port 3000")
