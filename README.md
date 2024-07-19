@@ -46,4 +46,6 @@ Calling the proofOfWork will give us the nonce, this nonce takes two parameters 
 <br>
 Lecture # 15 A Simple wallet for creating new transactions in blockchain datastructure. In this lecture, we create a simple web wallet using HTML having three inout fields amount, sender and recipient.
 <br>
-Then we write two endpoints: get endpoint to send the inex.html file from server to the browser and post endpoint to take the inputs from the browser to the server. 
+Then we write two endpoints: get endpoint to send the inex.html file from server to the browser and post endpoint to take the inputs from the browser to the server.
+<br> 
+Lecture # 16 Creating multiple nodes for decentralized network. Part one.....In this lecture, basically, we create multiple nodes to make the decentralized environment but, also create a port variable which will set the port numbers on which express server will listen the incoming requests when the nodeJS process launched.
