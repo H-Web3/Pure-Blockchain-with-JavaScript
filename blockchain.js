@@ -1,5 +1,5 @@
 const sha256 = require ('sha256');
-
+const currentNodeUrl = process.argv[3];
 
 function Blockchain (){
     this.chain = [];//this where our blocks or blockchain will store after mining
@@ -8,6 +8,8 @@ function Blockchain (){
     //Creating Genesis block by giving dummy nonce, pevious block hash and hash
     this.createNewBlock(4549, 'D1FE25AFFF30300C6AC1A8E3CE0C7EF99D298D8AC3ABE347741F13B56BD7D883',
                                  '0000e0e9b7b4cb7acbf3a9da692b0212c2f5ee3bb184e34833cb29919c7663d3');
+    this.currentNodeUrl = currentNodeUrl;
+    this.networkNodes = [];                             
 
 }
 
