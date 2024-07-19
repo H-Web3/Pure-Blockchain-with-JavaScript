@@ -13,6 +13,9 @@ const bitcoin = new Blockchain(); //make an instance of Blockchain constr func a
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));
 
+//this will set the port num on which express server will listen for incoming requests when nodeJs process launched
+const port = process.argv[2];
+
 /*---------------------------------------------------------------*/
 //This will give us complete Blockchian
 app.get('/blockchain', function (req, res) {   //make an end point 'blockchain'
@@ -68,7 +71,7 @@ app.post('/wallet', function (req, res) {
 
 /*---------------------------------------------------------------------*/
 
-app.listen(3000, function()
+app.listen(port, function()
 {
-  console.log("Server is running on port 3000")
+  console.log(`Server is running on ${port}....`)
 })
