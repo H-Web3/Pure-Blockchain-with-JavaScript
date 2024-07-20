@@ -49,3 +49,5 @@ Lecture # 15 A Simple wallet for creating new transactions in blockchain datastr
 Then we write two endpoints: get endpoint to send the inex.html file from server to the browser and post endpoint to take the inputs from the browser to the server.
 <br> 
 Lecture # 16 Creating multiple nodes for decentralized network. Part one.....In this lecture, basically, we create multiple nodes to make the decentralized environment but, also create a port variable which will set the port numbers on which express server will listen the incoming requests when the nodeJS process launched.
+<br>
+Lecture # 17 Connecting all nodes in a network. Part one...., In this lecture, we try to connect all the nodes so that they communicate with each other and make a decentralized environment. Practically, we create three POST endpoints which will register a new node and broadcast(give every node in network, its URL) it in the network then the new node will accept other nodes already available in the network.
