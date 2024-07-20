@@ -71,6 +71,25 @@ app.post('/wallet', function (req, res) {
 
 /*---------------------------------------------------------------------*/
 
+// register a node and broadcast it in the network
+app.post('/register-and-broadcast-node', function(req, res){
+
+
+}); 
+
+// This will register a node 
+app.post('/register-node', function(req, res){
+
+  
+});
+
+//This will register multiple nodes
+app.post('/register-nodes-bulk', function(req, res){
+
+  
+})
+
+/*--------------------------------------------------------------------*/
 app.listen(port, function()
 {
   console.log(`Server is running on ${port}....`)
